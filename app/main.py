@@ -44,7 +44,8 @@ def get_one_album(id):
     results = c.fetchall()
     db.close()
     return results
-    
+
+print(1)   
 # Start using the "Item" BaseModel
 # Post / Delete / Patch methods
 # @app.post("/items/{item_id}")

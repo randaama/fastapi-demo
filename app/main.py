@@ -18,7 +18,7 @@ app.mount("/static", StaticFiles(directory="static", html = True), name="static"
 HOST = os.environ.get('DBHOST')
 USER = os.environ.get('DBUSER')
 PASS = os.environ.get('DBPASS')
-DB = "nem2p"
+DB = "gba4fj"
 
 # The URL for this API has a /docs endpoint that lets you see and test
 # your various endpoints/methods.
@@ -45,7 +45,13 @@ def get_one_album(id):
     db.close()
     return results
 
-print(1)   
+
+# didn't work but page opens
+@app.get("/tester")
+def tester():
+    text = "Hello, testing to see if I have any idea what I'm doing"
+    return {"Hello":text}
+
 # Start using the "Item" BaseModel
 # Post / Delete / Patch methods
 # @app.post("/items/{item_id}")

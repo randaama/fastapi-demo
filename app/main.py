@@ -45,8 +45,7 @@ def get_one_album(id):
     db.close()
     return results
 
-
-# didn't work but page opens
+#works now
 @app.get("/tester")
 def tester():
     text = "Hello, testing to see if I have any idea what I'm doing"
